@@ -1,4 +1,4 @@
-const staticCache = 'restaurant-static-001';
+const staticCache = 'restaurant-offline-01';
 
 self.addEventListener('install', function(e) {
  e.waitUntil(
