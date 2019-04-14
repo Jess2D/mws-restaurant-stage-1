@@ -36,7 +36,6 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    option.setAttribute('label', `${option.name}`);
     select.append(option);
   });
 }
@@ -165,7 +164,7 @@ createRestaurantHTML = (restaurant) => {
   image.setAttribute('alt', `An image of ${restaurant.name}`);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   li.append(name);
 
