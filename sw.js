@@ -20,7 +20,7 @@ var urlsToCache = [
   '/restaurant.html?id=10'
 ];
 
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
@@ -60,7 +60,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['pages-cache-v1', 'site-posts-cache-v1'];
+  var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -74,3 +74,4 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
+
